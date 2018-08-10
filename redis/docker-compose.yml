@@ -1,0 +1,8 @@
+# Datei: redis/docker-compose.yml
+version: '3'
+services:
+  rd-master:
+    image: redis:4
+  rd-slave:
+    image: redis:4
+    command: redis-server --slaveof rd-master 6379

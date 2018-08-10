@@ -1,0 +1,13 @@
+# Datei: mongo/docker-compose.yml
+version: '3'
+services:
+  db:
+    image: mongo:3
+    volumes:
+      - mongo:/data/db
+      - ./init:/docker-entrypoint-initdb.d
+      - ./queries:/queries
+    environment:
+      MONGO_INITDB_DATABASE: geonames
+volumes:
+  mongo:
