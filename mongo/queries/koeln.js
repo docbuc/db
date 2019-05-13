@@ -1,4 +1,4 @@
-// Datei: mongo/queries/koeln.js
+// Datei: db/mongo/queries/koeln.js
 let dom = db.geoname.findOne({
   name: /Köln.*Dom/
 });

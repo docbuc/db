@@ -1,4 +1,4 @@
-// Datei: mongo/init/02_createindex.js
+// Datei: db/mongo/init/02_createindex.js
 print("Erzeuge GeoJson Punkte...");
 let i = 0;
 db.geoname.find().forEach(data => {
