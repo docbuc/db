@@ -2,15 +2,20 @@
 let dom = db.geoname.findOne({
   name: /Köln.*Dom/
 });
-let res = db.runCommand({
-  geoNear: "geoname",
-  near: dom.location,
-  maxDistance: 1000,
-  spherical: true,
-  query: {
-    feature_code: 'HTL'
+
+const query = [
+  {
+    $geoNear: {
+      near: dom.location,
+      spherical: true,
+      distanceField: 'dis',
+      query: { feature_code: 'HTL' }
+    }
+  }, {
+    $limit: 10
   }
-})
-res.results.forEach(data => {
-  print(Math.round(data.dis)+ "m: " + data.obj.name);
-})
+];
+let res = db.geoname.aggregate(query);
+res.forEach(data => {
+  print(Math.round(data.dis)+ "m: " + data.name);
+});
