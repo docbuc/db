@@ -14,8 +14,8 @@ Files :
 -------
 XX.zip                   : features for country with iso code XX, see 'geoname' table for columns. 'no-country' for features not belonging to a country.
 allCountries.zip         : all countries combined in one file, see 'geoname' table for columns
-cities500.zip           : all cities with a population > 500 or seats of adm div to PPLA4 (ca 185.000), see 'geoname' table for columns
-cities1000.zip           : all cities with a population > 1000 or seats of adm div to PPLA3 (ca 130.000), see 'geoname' table for columns
+cities500.zip            : all cities with a population > 500 or seats of adm div down to PPLA4 (ca 185.000), see 'geoname' table for columns
+cities1000.zip           : all cities with a population > 1000 or seats of adm div down to PPLA3 (ca 130.000), see 'geoname' table for columns
 cities5000.zip           : all cities with a population > 5000 or PPLA (ca 50.000), see 'geoname' table for columns
 cities15000.zip          : all cities with a population > 15000 or capitals (ca 25.000), see 'geoname' table for columns
 alternateNamesV2.zip     : alternate names with language codes and geonameId, file with iso language codes, with new columns from and to

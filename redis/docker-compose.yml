@@ -2,7 +2,7 @@
 version: '3'
 services:
   rd-master:
-    image: redis:5
+    image: redis:6
   rd-slave:
-    image: redis:5
+    image: redis:6
     command: redis-server --slaveof rd-master 6379
